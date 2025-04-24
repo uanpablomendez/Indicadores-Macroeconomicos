@@ -4,18 +4,19 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.dates as mdates
 
-# Cargar datos y formatear fechas
+# Cargar datos
 df = pd.read_csv("datostaller.csv").dropna()
+# Formatear fechas
 df['Fecha'] = pd.to_datetime(df['Fecha'], errors='coerce')
 
 st.title("Taller Indicadores Macroeconómicos")
 
-# Crear pestañas con títulos claros
+# Crear pestañas con títulos
 tab1, tab2, tab3, tab4 = st.tabs([
-    "Tasa de política monetaria",
-    "Producto Interno Bruto (PIB)",
-    "Tasa de desempleo",
-    "Inflación anual"
+    "Tab1",
+    "Tab2",
+    "Tab3",
+    "Tab4"
 ])
 
 with tab1:
