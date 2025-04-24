@@ -4,10 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Cargar datos
-df = pd.read_csv("datostaller.csv")
-
-# Corregir nombre del método
-st.title("Taller")
+df = pd.read_csv("datostaller.csv").dropna()
+st.title("Taller Indicadores Macroeconomicos")
 
 # Crear pestañas
 tab1, tab2, tab3, tab4 = st.tabs(["Tab1", "Tab2", "Tab3", "Tab4"])
@@ -55,3 +53,5 @@ with tab4:
     ax.set_title("Fin de año")
     fig.tight_layout()
     st.pyplot(fig)
+
+# https://indicadores-macroeconomicos-5nzkww87l3mj7uq8kjfdur.streamlit.app/
